@@ -11,10 +11,7 @@ const error = (error) => {
    
 
 const creatingFiles = () => {
-    let files = ["file1.txt", "file2.txt","file3.txt","file4.txt"]
-    
-        // console.log(element)
-        // fs.writeFile("ejemplo.txt", "contenido de archivo", "utf8", error)
+    let files = ["file1.txt", "file2.txt","file3.txt","file4.txt"]    
         if (fs.existsSync(path)){
             files.forEach(element => {
                 fs.writeFile(`${path}/${element}`, `Contenido de ${element}`, "utf8", error)
@@ -23,11 +20,7 @@ const creatingFiles = () => {
             fs.mkdir(path, error =>{
                 if (error) throw error;
              })            
-        }
-        
-    
-
-    //fs.writeFile("ejemplo.txt", "contenido de archivo", "utf8", error)
+        }     
 }
 
 creatingFiles()
