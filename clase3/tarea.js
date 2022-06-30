@@ -12,7 +12,7 @@ const error = (error) => {
 
 const creatingFiles = () => {
     let files = ["file1.txt", "file2.txt","file3.txt","file4.txt"]    
-        if (fs.existsSync(path)){
+        if (fs.existsSync(path)){//sync es una funsion sincrona
             files.forEach(element => {
                 fs.writeFile(`${path}/${element}`, `Contenido de ${element}`, "utf8", error)
             });
